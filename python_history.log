@@ -1,0 +1,333 @@
+a = 3.4
+type(a)
+l=[[1,2],[3,4,5]]
+len(l)
+t=l,2
+l[0]=[2,3]
+t
+l2=copy(l)
+import copy
+l2=copy(l)
+l2=copy.copy(l)
+l2
+l2=copy.deepcopy(l)
+l[0]=4
+l2
+l
+l1=[2,3]
+l2=[4,5]
+l3=l1+l2
+l3
+l1=[2,3]*4
+l1
+d={}
+type(d)
+d={"a":123,"b":2}
+d["a"]
+d[a]
+l[1,2,3]
+l=[1,2,3]
+for x in l:
+print(x)
+for x in l:
+    print(x)
+d={"a":1,"b":2}
+for k,v in d.items:
+    print(k,v)
+for (k,v) in d.items:
+    print(k,v)
+for k,v in d.items():
+    print(k,v)
+def myadd(x,):
+    return x+y
+def myadd(x,y):
+    return x+y
+myadd(1,)
+myadd(1,2)
+myadd("a","bc")
+myadd(1,"a")
+locals()
+fund={"same":id}
+def id(3,4):
+def id(x,y):
+    return x+y
+fund={"same":id}
+fund["same"]
+fund["same"](x=3)
+def id(x=0,y=0):
+    return x+y
+fund["same"](x=3)
+fund={"same":id}
+fund["same"](x=3)
+help(len)
+helpt(int)
+help(int)
+dir(int)
+dir(__abs__)
+locals()
+import math
+help(math)
+math.sin(math.pi)
+from math import sin,cos,pi
+sin(pi)
+import numpy as np
+locals()
+l
+a = np.array(l)
+type a
+type(a)
+a
+a.dtype()
+a.dtype
+l.__dir__
+a.shape
+a.dim
+a.dim()
+a.size
+a.ndim
+a=np.array([[1,2],[3,4]]
+a
+a=np.array([[1,2],[3,4]])
+a
+a.dim
+a.ndim
+a.shape
+a.type
+a.dtype
+s={1,2,3,4}
+a=np.array(s)
+s
+s.shape
+s.dim
+a=np.array([1,2,3,4])
+a.shape
+a.shape(2,2)
+a.shape=(2,2)
+a
+a=np.zeros((2,3))
+a
+a=np.ones((2,3))
+a
+a=np.ones((2,3))*42
+a
+a.shape
+locals()
+a=np.ndarray(shape(2,3))
+a=np.ndarray(shape=(2,3))
+a
+l
+l=[1,2,3,4]
+a=np.ndarray(shape=(2,2), buffer=np.asarray(l))
+a
+a=np.ndarray(shape=(2,2), buffer=np.asarray(l,dtype="float"))
+a
+l=[1,0,1,0]
+a
+a=np.ndarray(shape=(2,2), buffer=np.asarray(l,dtype="float"))
+a
+l=[1,0,0,1]
+a
+a=np.ndarray(shape=(2,2), buffer=np.asarray(l,dtype="float"))
+a
+l2=[2,1,1,2]
+b=np.ndarray(shape=(2,2), buffer=np.asarray(l2,dtype="float"))
+b
+a+b
+np.add(a,b)
+l
+l=[1,2,1,2]
+l
+l2[3,4]
+l2=[3,4]
+a=np.ndarray(shape=(2,2), buffer=np.asarray(l,dtype="float"))
+b=np.ndarray(shape=(2,2), buffer=np.asarray(l2,dtype="float"))
+b=np.ndarray(shape=(2,1), buffer=np.asarray(l2,dtype="float"))
+a+b
+a*b
+a/b
+a//b
+l
+l=[1,0,1,0]
+l2=[1,2,1,2]
+a=np.ndarray(shape=(2,2), buffer=np.asarray(l,dtype="float"))
+b=np.ndarray(shape=(2,1), buffer=np.asarray(l2,dtype="float"))
+a*b
+np.matmul(a,b)
+a
+b
+l
+l2
+b=np.ndarray(shape=(2,2), buffer=np.asarray(l2,dtype="float"))
+a*b
+np.matmul(a,b)
+b
+np.matmul(a,b)
+np.matmul(b,a)
+b*a
+history
+import readline
+readline.get_history_item()
+readline.get_history_len()
+readline.get_history_length()
+readline.get_history_item(-1)
+readline.get_history_item(1)
+readline.get_history_item(10)
+readline.get_history_item(100)
+readline.get_history_item(200)
+readline.write_history_file("python_history.txt")
+a = pi/4
+a
+c=np.ndarray(shape=(3,3), buffer=np.asarray(l,dtype="float"))
+l=[-cos(a),sin(a),0,sin(a),cos(a),0,0,0,1]
+c=np.ndarray(shape=(3,3), buffer=np.asarray(l,dtype="float"))
+c
+b=[2,2,1]
+np.matmul(a,b)
+b
+a
+c
+np.matmul(c,b
+)
+np.matmul(c,b)
+res=np.matmul(c,b)
+res
+readline.write_history_file("python_history.txt")
+import cv2
+readline.write_history_file("python_history.txt")
+img=cv2.imread("world.png")
+img
+img=cv2.imread("~/world.png")
+img
+img=cv2.imread("world.png")
+img
+img.shape
+img
+type(img)
+readline.write_history_file("python_history.txt")
+locals()
+import cv2
+img=cv2imread("world.png")
+img=cv2.imread("world.png")
+img
+cv2.imshow("world.png",img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+import readlinge
+import readline
+readline.write_history_file("python_history.txt")
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+cv2.imshow("world.png",img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+img2=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+cv2.imshow("world.png",img2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+readline.write_history_file("python_history.txt")
+img2.shape
+cv2.imshow("world.png",img2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+img2.shape
+img2
+img3
+img2
+img2[0:10,0:10]
+img2[0:100,0:100]
+img2[0:100:2,0:100:2]
+cv2.imshow("world.png",img2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+img3=img2[::2,::2]
+cv2.imshow("world.png",img3)
+cv2.waitKey()
+cv2.destroyAllWindows()
+readline.write_history_file("python_history.txt")
+img=cv2.imread("world.png")
+img
+b,r,g=cv2.split(img)
+b
+r
+g
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+hsv
+readline.write_history_file("python_history.txt")
+cv2.imshow("world.png",img3)
+cv2.waitKey()
+cv2.destroyAllWindows()
+resized_img=cv2.resize(img3,(h*2,w*2))
+h,w=img.shape[:2]
+resized_img=cv2.resize(img3,(h*2,w*2))
+cv2.imshow("world.png",resized_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cv2.imshow("world.png",img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+M=np.float32([[10,50],[0,1,10]])
+import numpy as np
+M=np.float32([[10,50],[0,1,10]])
+M=np.float32([[1050],[0,1,10]])
+M=np.float32([[10,50],[0,1,10]])
+M=np.float32([[,10,50],[0,1,10]])
+M=np.float32([[1,0,50],[0,1,10]])
+new_img=np.warpAffine(img,M,(h,w))
+new_img=np.worpAffine(img,M,(h,w))
+new_img=cv2.warpAffine(img,M,(h,w))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+cv2.imshow("world.png",img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+resized_img=cv2.resize(img3,(h*2,w*2))
+readline.write_history_file("python_history.txt")
+new_img
+new_img=cv2.warpAffine(img,M,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+rotMat=cv2.getRotationMatrix2D((x,y),90,2)
+rotMat=cv2.getRotationMatrix2D((100,100),90,2)
+rotMat
+img.shape
+rotMat=cv2.getRotationMatrix2D((240,480),90,2)
+new_img=cv2.warpAffine(img,rotMat,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+new_img=cv2.warpAffine(img,rotMat,(h,w))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+rotMat=cv2.getRotationMatrix2D((240,480),90,1)
+new_img=cv2.warpAffine(img,rotMat,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+rotMat=cv2.getRotationMatrix2D((0,0),90,1)
+new_img=cv2.warpAffine(img,rotMat,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+rotMat=cv2.getRotationMatrix2D((240,480),45,1)
+new_img=cv2.warpAffine(img,rotMat,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+rotMat=cv2.getRotationMatrix2D((240,480),pi/4,1)
+from math import sin,cos,pi
+rotMat=cv2.getRotationMatrix2D((240,480),pi/4,1)
+new_img=cv2.warpAffine(img,rotMat,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+rotMat=cv2.getRotationMatrix2D((240,480),45,1)
+new_img=cv2.warpAffine(img,rotMat,(w,h))
+cv2.imshow("world.png",new_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+readline.write_history_file("python_history.txt")

@@ -1,0 +1,260 @@
+    1  apt-get install python3
+    2  sudo su
+    3  cd /etc/
+    4  ls
+    5  nano sudoers
+    6  sudo nano sudoers
+    7  su nano sudoers
+    8  su root
+    9  apt-get install python3
+   10  sudo su
+   11  ls
+   12  cat python_history.txt 
+   13  exit
+   14  python 3
+   15  python --version
+   16  apt-get python3
+   17  apt-get install python3
+   18  sudo apt-get install python3
+   19  python --help
+   20  python
+   21  ls /usr/bin/python*
+   22  update-alternatives --install /usr/bin/python python /usr/bin/python3
+   23  update-alternatives --install /usr/bin/python python /usr/bin/python3.7
+   24  update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+   25  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+   26  python --version
+   27  python
+   28  ls -al
+   29  cat python_history.txt 
+   30  locate png jpg
+   31  locate png
+   32  cd /usr/share/
+   33  ls -al
+   34  ls m*
+   35  find *.png
+   36  find . *.png
+   37  find . *.png | grep png
+   38  cd evolution/images/
+   39  cp world_map-960.png ~
+   40  cd ~
+   41  ls
+   42  word-list-compress 
+   43  shotwell world_map-960.png 
+   44  mv world_map-960.png world.png
+   45  cat python_history.txt 
+   46  shotwell world.png 
+   47  cat python_history.txt 
+   48  nano python_history_old.txt
+   49  cat python_history_old.txt 
+   50  cat python_history.txt 
+   51  shotwell world.png 
+   52  cat python_history_old.txt 
+   53  cat python_history.txt 
+   54  ls -al
+   55  ssh
+   56  ifconfig
+   57  ipconfig
+   58  ip addr
+   59  ip addr | grep inet
+   60  ip addr | grep inet 1
+   61  ip addr | grep inet\ 1
+   62  sudo shutdown now
+   63  ls -al
+   64  rm python_history*
+   65  ls -al
+   66  apt-get install vscode
+   67  sudo apt-get install vscode
+   68  sudo apt-get install code
+   69  firefox
+   70  exit
+   71  firefox
+   72  ls
+   73  nano videoScript1.py
+   74  python videoScript1.py 
+   75  nano videoScript1.py
+   76  python videoScript1.py 
+   77  nano videoScript1.py
+   78  python videoScript1.py 
+   79  nano videoScript1.py
+   80  python videoScript1.py 
+   81  nano videoScript1.py
+   82  python videoScript1.py 
+   83  nano videoScript1.py
+   84  y
+   85  python videoScript1.py 
+   86  nano videoScript1.py
+   87  python videoScript1.py 
+   88  nano videoScript1.py
+   89  python videoScript1.py 
+   90  nano videoScript1.py 
+   91  python videoScript1.py 
+   92  nano videoScript1.py 
+   93  python videoScript1.py 
+   94  nano videoScript1.py 
+   95  python videoScript1.py 
+   96  nano videoScript1.py 
+   97  cat videoScript1.py 
+   98  nano videoScript1.py 
+   99  python videoScript1.py 
+  100  exit
+  101  python videoScript1.py 
+  102  nano videoScript1.py 
+  103  python videoScript1.py 
+  104  nano videoScript1.py 
+  105  python videoScript1.py 
+  106  nano videoScript1.py 
+  107  python videoScript1.py 
+  108  nano videoScript1.py 
+  109  snap
+  110  snapd
+  111  sudo apt install snapd
+  112  sudo snap install --classic code
+  113  sudo snap remove code
+  114  ls
+  115  ls Downloads/
+  116  ls -al
+  117  ls /tmp/
+  118  ls /tmp/mozilla_michael0/
+  119  sudo apt install /tmp/mozilla_michael0/code_1.38.1-1568209190_amd64.deb 
+  120  code videoScript1.py 
+  121  code
+  122  exit
+  123  ls
+  124  nano videoScript1.py 
+  125  python videoScript1.py 
+  126  nano videoScript1.py 
+  127  python videoScript1.py 
+  128  nano videoScript1.py 
+  129  python videoScript1.py 
+  130  nano videoScript1.py 
+  131  python videoScript1.py 
+  132  nano videoScript1.py 
+  133  python videoScript1.py 
+  134  nano videoScript1.py 
+  135  python videoScript1.py 
+  136  exit
+  137  python videoScript1.py 
+  138  nano videoScript1.py 
+  139  python detect8.py 
+  140  python3 detect8.py 
+  141  python detect8.py
+  142  apt-get install python3-matplotlib
+  143  sudo apt-get install python3-matplotlib
+  144  nano detect8.py 
+  145  python detect8.py
+  146  exit
+  147  python detect8.py
+  148  ls
+  149  nano detect8.py 
+  150  mkdir detect8_images
+  151  python detect8.py
+  152  ls -al
+  153  cd detect8_images/
+  154  ls
+  155  shotwell detect0.png 
+  156  ls -al
+  157  ls
+  158  cd ..
+  159  ls
+  160  unxz 2018-01-08-raspberry-pi-3-buster-PREVIEW.img.xz 
+  161  ls -al
+  162  fdisk -l 2018-01-08-raspberry-pi-3-buster-PREVIEW.img 
+  163  /sbin/fdisk -l 2018-01-08-raspberry-pi-3-buster-PREVIEW.img 
+  164  /sbin/fdisk --help
+  165  mkdir /tmp/dimg/
+  166  mount -v -o offset=614400 ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  167  sudo mount -v -o offset=614400 ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  168  mount --help
+  169  sudo mount -v -a offset=614400 ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  170  ls /tmp/dimg
+  171  mount -help
+  172  sudo mount -v -o offset=614400 ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  173  /sbin/fdisk -l 2018-01-08-raspberry-pi-3-buster-PREVIEW.img 
+  174  sudo mount -v -o offset=614400 ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img | /tmp/dimg/
+  175  sudo mount -v -o offset=614400 ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img | /tmp/dimg
+  176  sudo mount -v -o offset=614400 ext4 --source=2018-01-08-raspberry-pi-3-buster-PREVIEW.img | --destination=/tmp/dimg
+  177  sudo mount -v -o offset=614400 ext4 --source=2018-01-08-raspberry-pi-3-buster-PREVIEW.img | --destination=/tmp/dimg/
+  178  ls /tmp/dimg/
+  179  sudo mount -v -o offset=614400 ext4 --source=2018-01-08-raspberry-pi-3-buster-PREVIEW.img | --target=/tmp/dimg/
+  180  sudo mount -v -o offset=614400 ext4 --source=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img | --target=/tmp/dimg/
+  181  sudo mount -v -o offset=614400*512 ext4 --source=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img | --target=/tmp/dimg/
+  182  sudo mount -v -o offset=314572800 ext4 --source=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img | --target=/tmp/dimg/
+  183  sudo mount -v -o offset=314572800 -t vfat 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  184  sudo mount -v -o offset=314572800 -t ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  185  ls /tmp/dimg
+  186  ls -al
+  187  ls -al /tmp/dimg
+  188  mkdir /tmp/bootloader
+  189  cp /tmp/dimg/initrd.img /tmp/bootloader/
+  190  cp /tmp/dimg/vmlinuz /tmp/bootloader/
+  191  mkdir /tmp/img1
+  192  umount /tmp/dimg 
+  193  sudo umount /tmp/dimg 
+  194  mount -v -o offset=1048576 -t vfat 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/img1/
+  195  sudo mount -v -o offset=1048576 -t vfat 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/img1/
+  196  ls /tmp/img1
+  197  ls -lha /tmp/img1
+  198  cp /tmp/img1/bcm2837-rpi-3-b.dtb /tmp/bootloader/
+  199  cp /tmp/img1/cmdline.txt /tmp/bootloader/
+  200  cat .bash_history 
+  201  history
+  202  history >> history201.txt
+  203  cat history201.txt 
+  204  cd /tmp/bootloader/
+  205  cat cmdline.txt 
+  206  ls
+  207  ls -l
+  208  df
+  209  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -mega 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw console=ttyAMA0 memtest=1" -drive file=~/ 2018-01-08-raspberry-pi-3-buster-PREVIEW.img, format=raw
+  210  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw console=ttyAMA0 memtest=1" -drive file=~/ 2018-01-08-raspberry-pi-3-buster-PREVIEW.img, format=raw
+  211  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img, format=raw
+  212  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img format=raw
+  213  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw
+  214  exit
+  215  cd /tmp/bootloader/
+  216  ls -al
+  217  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw
+  218  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  219  exit
+  220  cd /tmp/bootloader/
+  221  ls -al
+  222  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  223  sudo umount /tmp/dimg
+  224  cd ~
+  225  sudo umount /tmp/dimg
+  226  ls /tmp/bootloader/
+  227  cd /tmp/bootloader/
+  228  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  229  cd ~
+  230  sudo mount -v -o offset=314572800 -t ext4 2018-01-08-raspberry-pi-3-buster-PREVIEW.img /tmp/dimg/
+  231  cd /tmp/dimg/
+  232  cd etc/
+  233  sudo nano fstab 
+  234  cd ~
+  235  sudo umount /tmp/dimg
+  236  cd /tmp/bootloader/
+  237  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  238  history |grep fstab
+  239  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  240  exit
+  241  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  242  cd /tmp/bootloader/
+  243  qemu-system-aarch64 -kernel vmlinuz -initrd initrd.img -m 1024 -M virt -cpu cortex-a53 -serial stdio -append "root=/dev/vda2 rw loglevel=8 fsck.repair=yes console=ttyAMA0 memtest=1" -drive file=~/2018-01-08-raspberry-pi-3-buster-PREVIEW.img,format=raw,if=sd,id=hd-root -device virtio-blk-device,drive=hd-root -netdev user,id=net0,hostfwd=tcp::5022-:22 -device virtio-net-device,netdev=net0 -no-reboot
+  244  history
+  245  history >> ~/history244.txt 
+  246  lsblk
+  247  cd ~
+  248  ls -al
+  249  rm 20190206-raspberry-pi-3-buster-PREVIEW.img 
+  250  ls -al
+  251  wget https://people.debian.org/~gwolf/raspberrypi3/20190206/20190206-raspberry-pi-3-buster-PREVIEW.img.xz
+  252  ls -al
+  253  sudo unxz 20190206-raspberry-pi-3-buster-PREVIEW.img.xz 
+  254  lsblk
+  255  ls -al
+  256  cat detect8
+  257  cat detect8.py 
+  258  history
+  259  ls -al
+  260  history > debianhistory.log

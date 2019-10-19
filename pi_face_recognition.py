@@ -1,12 +1,10 @@
-# USAGE
-# python pi_face_recognition.py --cascade haarcascade_frontalface_default.xml --encodings encodings.pickle
-
-import face_recognition
+# Read the README.MD file for usage details
+import face_recognition	#https://github.com/ageitgey/face_recognition using dlib #http://dlib.net
 import argparse
-import pickle
+import pickle	#https://docs.python.org/3/library/pickle.html
 import time
 import cv2
-import pygame
+import pygame	#for playing audio files https://www.pygame.org/news
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -22,25 +20,33 @@ print("[INFO] loading encodings + face detector...")
 data = pickle.loads(open(args["encodings"], "rb").read())
 detector = cv2.CascadeClassifier(args["cascade"])
 
-# initialize the video stream and allow the camera sensor to warm up
+# initialize video stream (vs)
 print("Starting video stream...")
-vs=cv2.VideoCapture(0)
+vs=cv2.VideoCapture(0) #works for most devices, otherwise check with lsusb and devices in /dev/
 vs.set(cv2.CAP_PROP_FRAME_WIDTH, 1280) # set the Horizontal resolution
 vs.set(cv2.CAP_PROP_FRAME_HEIGHT, 720) # Set the Vertical resolution
 vs.set(cv2.CAP_PROP_BRIGHTNESS,0.4)
 
-alreadyGreeted = False
+#variables for checking if a person has already been greeted.
+#otherwise a greeting would be played at every face recognition (while standing in the hallway for example)
 alreadyGreetedMichael = False
 alreadyGreetedEmanuela = False
-side = "none"
+
+side = "none"	#variable for setting the side of the door (left/right), in which the first movement was detected
+
+#timestamp variables for checking which was first
 leftSideTimestamp = 0
 rightSideTimestamp = 0
 
 #time.time() = floating point number expressed in seconds since the epoch, in UTC ! https://www.tutorialspoint.com/python/time_time.htm
-infotimer = time.time()
+infotimer = time.time()	#just an information for how long the camera has been running
+
+#timer variables for each person living in the appartment.
+#a person should not be greeted twice, usually a person will not leave and come home faster than in 2 minutes.
 startTimerMichael = time.time()
 startTimerEmanuela = time.time()
 
+#detect frame changes and on which side the first frame changed
 def frameChanged(init_frame, curr_frame):   
 	global side
 	global leftSideTimestamp
@@ -65,7 +71,7 @@ def frameChanged(init_frame, curr_frame):
 	if rightSideMovement == True or leftSideMovement == True:
 		return True
 
-# Beispiel McGuire
+#example from Mr. McGuire, the inital frame change detection
 def detect_first_movement_side(frame, lframe):
 	diff = cv2.addWeighted(lframe, 0.5, frame, -0.5, 0.0)
 	d_hist = cv2.calcHist([diff],[0],None,[16],[0,256])
@@ -73,6 +79,8 @@ def detect_first_movement_side(frame, lframe):
 		return True
 	return False
 
+#read a frame (grab & retrieve), convert to gray, equalize, blur and resize
+#for highest performance optimization. For more details see the paper.
 def grab_resized_grey_blurred_frame(cap):
 	ret = cap.grab()
 	ret, frame = cap.retrieve()
@@ -82,8 +90,9 @@ def grab_resized_grey_blurred_frame(cap):
 	frame = cv2.resize(frame,(frame.shape[1]//2,frame.shape[0]//2))
 	return frame
 
+#detect faces, read them in rgb, compare them with the dataset, play audio on face detection.
+#fires on first Motion detection.
 def detect_faces_and_recgonize_known_face():
-	global alreadyGreeted
 	global alreadyGreetedMichael
 	global alreadyGreetedEmanuela
 	global side
@@ -92,13 +101,13 @@ def detect_faces_and_recgonize_known_face():
 	ret, frame = vs.retrieve()
 	frame = cv2.resize(frame,(frame.shape[1]//2,frame.shape[0]//2))
 
-	#BGR to RGB (for face recognition)
-	rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
 	# detect faces in the grayscale frame
 	rects = detector.detectMultiScale(frame, scaleFactor=1.1, 
 		minNeighbors=5, minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE)
+
+	#BGR to RGB (needed for face recognition)
+	rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
 	# OpenCV returns bounding box coordinates in (x, y, w, h) order
 	# but we need them in (top, right, bottom, left) order, so we
@@ -136,11 +145,13 @@ def detect_faces_and_recgonize_known_face():
 			# will select first entry in the dictionary)
 			name = max(counts, key=counts.get)
 
+			#determine doorstatus for audiofiles
 			if side == "left":
 				doorstatus="welcomeHome"
 			if side == "right":
 				doorstatus="bye"
 
+			#greet at recognition
 			if name == 'michael' and alreadyGreetedMichael == False:
 				pygame.mixer.init()
 				pygame.mixer.music.load("audioFiles/"+doorstatus+name+".wav")
@@ -198,18 +209,18 @@ def starttimer(name):
 			startTimerEmanuela=time.time()
 			alreadyGreetedEmanuela=False
 
-# main from here
+#'main' from here
 
-# get initial frame
+#get initial frame
 initialFrame = grab_resized_grey_blurred_frame(vs)
 
-# loop over frames from the video file stream
+#loop over frames from the video file stream
 while True:
 	
 	frame = grab_resized_grey_blurred_frame(vs)
 	if frameChanged(initialFrame, frame):
 		print("Motion detected on the "+side+" side of the door")
-		detect_faces_and_recgonize_known_face()
+		detect_faces_and_recgonize_known_face() #since face recognition most power expensive, only start at motion detection.
 
 	key = cv2.waitKey(1) 
 	if key == ord("q"):

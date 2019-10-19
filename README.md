@@ -10,8 +10,8 @@ install python libraries (python 3 needed!):
 
 encode a given dataset with given encodings 
 - python3 encode_faces.py --dataset dataset --encodings encodings.pickle --detection-method hog
--- cnn for strong pcs with GPU's
--- hog elsewhere (raspberry pi etc.)
+	- cnn for strong pcs with GPU's
+	- hog elsewhere (raspberry pi etc.)
 
 connect a camera and a speaker if you are on a raspberry
 

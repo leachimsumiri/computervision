@@ -1,7 +1,7 @@
 # exclude everything
-#dataset/emanuela/*
-#dataset/michael/*
+dataset/emanuela/*
+dataset/michael/*
 
 # exception to the rule
-#!dataset/emanuela/.gitkeep 
-#!dataset/michael/.gitkeep
+!dataset/emanuela/.gitkeep 
+!dataset/michael/.gitkeep

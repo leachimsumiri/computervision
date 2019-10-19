@@ -1,1 +1,7 @@
-detect8_images/
+# exclude everything
+dataset/emanuela/*
+dataset/michael/*
+
+# exception to the rule
+!dataset/emanuela/.gitkeep 
+!dataset/michael/.gitkeep

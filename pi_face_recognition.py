@@ -46,6 +46,25 @@ infotimer = time.time()	#just an information for how long the camera has been ru
 startTimerMichael = time.time()
 startTimerEmanuela = time.time()
 
+#read a frame (grab & retrieve), convert to gray, equalize, blur and resize
+#for highest performance optimization. For more details see the paper.
+def grab_resized_grey_blurred_frame(cap):
+	ret = cap.grab()
+	ret, frame = cap.retrieve()
+	frame = cv2.resize(frame,(frame.shape[1]//2,frame.shape[0]//2))
+	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+	cv2.equalizeHist(frame)
+	frame = cv2.medianBlur(frame,3)
+	return frame
+
+#example from Mr. McGuire, the inital frame change detection
+def detect_first_movement_side(frame, lframe):
+	diff = cv2.addWeighted(lframe, 0.5, frame, -0.5, 0.0)	#calculates weighted sum of 2 frames
+	d_hist = cv2.calcHist([diff],[0],None,[16],[0,256])
+	if(d_hist[2] > 5):	#5 works best for movement detection, not to low, nor to high
+		return True
+	return False
+
 #detect frame changes and on which side the first frame changed
 def frameChanged(init_frame, curr_frame):   
 	global side
@@ -53,6 +72,9 @@ def frameChanged(init_frame, curr_frame):
 	global rightSideTimestamp
 
 	#split frame into left and right part
+	#img sizes are globally defined and divded by 2 later => x=640,y=360)
+	#left side is from 0 - 320 but the whole y from 0 - 360
+	#right side is from 320 - 640 but the whole y from 0 - 360 
 	leftSideMovement = detect_first_movement_side(init_frame[0:320, 0:360], curr_frame[0:320, 0:360])
 	if leftSideMovement == True :
 		leftSideTimestamp = time.time()
@@ -71,25 +93,6 @@ def frameChanged(init_frame, curr_frame):
 	if rightSideMovement == True or leftSideMovement == True:
 		return True
 
-#example from Mr. McGuire, the inital frame change detection
-def detect_first_movement_side(frame, lframe):
-	diff = cv2.addWeighted(lframe, 0.5, frame, -0.5, 0.0)
-	d_hist = cv2.calcHist([diff],[0],None,[16],[0,256])
-	if(d_hist[2] > 5):	#5 works best for movement detection, not to low, nor to high
-		return True
-	return False
-
-#read a frame (grab & retrieve), convert to gray, equalize, blur and resize
-#for highest performance optimization. For more details see the paper.
-def grab_resized_grey_blurred_frame(cap):
-	ret = cap.grab()
-	ret, frame = cap.retrieve()
-	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	cv2.equalizeHist(frame)
-	frame = cv2.medianBlur(frame,3)
-	frame = cv2.resize(frame,(frame.shape[1]//2,frame.shape[0]//2))
-	return frame
-
 #detect faces, read them in rgb, compare them with the dataset, play audio on face detection.
 #fires on first Motion detection.
 def detect_faces_and_recgonize_known_face():
@@ -101,7 +104,7 @@ def detect_faces_and_recgonize_known_face():
 	ret, frame = vs.retrieve()
 	frame = cv2.resize(frame,(frame.shape[1]//2,frame.shape[0]//2))
 
-	# detect faces in the grayscale frame
+	# detect faces in the frame
 	rects = detector.detectMultiScale(frame, scaleFactor=1.1, 
 		minNeighbors=5, minSize=(30, 30),
 		flags=cv2.CASCADE_SCALE_IMAGE)

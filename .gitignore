@@ -1,0 +1,12 @@
+*.log
+dataset/emanuela/*
+dataset/michael/*
+examples/*
+pi-face-recognition/dataset/emanuela/*
+pi-face-recognition/dataset/michael/*
+
+# exception to the rule
+!dataset/emanuela/.gitkeep 
+!dataset/michael/.gitkeep
+!pi-face-recognition/dataset/emanuela/.gitkeep
+!pi-face-recognition/dataset/michael/.gitkeep
